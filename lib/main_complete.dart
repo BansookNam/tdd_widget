@@ -113,7 +113,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            PagenationWidget(),
+                            PagenationWidgetComplete(
+                              totalItemCount: totalCount,
+                              currentPage: currentPage,
+                              onTapPage: (page) {
+                                setState(() {
+                                  currentPage = page;
+                                  requesetData();
+                                });
+                              },
+                            ),
                           ],
                         )
                       ],
