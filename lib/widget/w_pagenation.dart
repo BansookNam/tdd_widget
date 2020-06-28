@@ -4,10 +4,11 @@ class PagenationWidget extends StatefulWidget {
   PagenationWidget({Key key}) : super(key: key);
 
   @override
-  _PagenationWidgetState createState() => _PagenationWidgetState();
+  PagenationWidgetState createState() => PagenationWidgetState();
 }
 
-class _PagenationWidgetState extends State<PagenationWidget> {
+@visibleForTesting
+class PagenationWidgetState extends State<PagenationWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
