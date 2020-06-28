@@ -27,8 +27,6 @@ class PagenationWidgetCompleteState extends State<PagenationWidgetComplete> {
 
   @override
   Widget build(BuildContext context) {
-    print(totalPageCount);
-    print(pageIndex);
     pageList = getPageNumbers();
     return Container(
       child: Row(

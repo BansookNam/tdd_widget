@@ -11,7 +11,9 @@ class _PagenationWidgetState extends State<PagenationWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 40,
+      width: 200,
+      child: Row(),
       color: Colors.blue,
     );
   }

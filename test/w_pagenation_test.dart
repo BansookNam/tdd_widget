@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:quiver/iterables.dart';
+import 'package:tdd_widget/widget/w_pagenation.dart';
 import 'package:tdd_widget/widget/w_pagenation_complete.dart';
 
 extension WidgetTesterExt on WidgetTester {
@@ -12,7 +13,7 @@ extension WidgetTesterExt on WidgetTester {
 void main() {
   // Define a test. The TestWidgets function also provides a WidgetTester
   // to work with. The WidgetTester allows you to build and interact
-  // with widgets in the test environment.
+  // with widgets in the  test environment.
 
   initialStateTest();
   initialViewTest();
@@ -94,12 +95,12 @@ void initialViewTest() {
     });
 
     testWidgets('아이템이 20개일때 1부터 4까지 텍스트 버튼이 존재하는가', (WidgetTester tester) async {
-      final pagenationWidget = PagenationWidgetComplete(
+      final widget = PagenationWidgetComplete(
         totalItemCount: 20,
         currentPage: 1,
       );
       //Given + When
-      await tester.pumpWidgetWithMaterialApp(pagenationWidget);
+      await tester.pumpWidgetWithMaterialApp(widget);
 
       // Then
       for (int i in range(4)) {
